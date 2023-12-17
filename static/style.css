@@ -1,0 +1,445 @@
+html {
+    --background: #ffffff;
+    --main: #000000;
+    --alternate: #0E4E8C;
+    --lightalt: #1661ac;
+    --sub: #9C9C9C;
+}
+
+@font-face {
+    font-family: "LeagueSpartan";
+    src: url("../assets/LeagueSpartan-Bold.otf");
+}
+
+@font-face {
+    font-family: "Cabin";
+    src: url("../assets/Cabin-Regular-TTF.ttf");
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--main);
+    background: var(--background);
+    font-family: "Cabin";
+    font-size: 14pt;
+    scroll-behavior: smooth;
+    Overflow-x: hidden;
+}
+
+h0 {
+    font-family: "LeagueSpartan";
+    font-weight: lighter;
+    font-size: 45pt;
+    transition: all 0.15s;
+    letter-spacing: .1rem;
+}
+
+h1 {
+    font-family: "LeagueSpartan";
+    font-weight: lighter;
+    font-size: 35pt;
+    transition: all 0.15s;
+    letter-spacing: .1rem;
+}
+
+h2 {
+    font-family: "LeagueSpartan";
+    font-weight: lighter;
+    font-size: 25pt;
+    transition: all 0.15s;
+    letter-spacing: .1rem;
+}
+
+h3 {
+    font-family: "Cabin";
+    font-size: 20pt;
+    transition: all 0.15s;
+    font-weight: lighter;
+    letter-spacing: .1rem;
+}
+
+h4 {
+    font-family: "Cabin";
+    font-size: 17pt;
+    transition: all 0.15s;
+}
+
+h5 {
+    font-family: "Cabin";
+    font-size: 13pt;
+}
+
+/* This is for buttons */
+h6 {
+    font-family: "Cabin";
+    font-weight: 200;
+    font-size: 14pt;
+    margin: 20px;
+}
+
+button {
+    /* width: 30%; */
+    max-width: 200px;
+    min-width: 200px;
+    background-color: var(--alternate); /* Green */
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+  
+
+button:hover {
+  background-color: var(--lightalt);
+  transition: 0.15s;
+}
+
+button:focus-visible {
+  box-shadow: none;
+}
+
+p {
+    font-weight: lighter;
+    font-size: 14pt;
+    color: #5E5E5E;
+    line-height: 1.5;
+}
+
+.black {
+    color: var(--main);
+}
+
+.blue {
+    color: var(--alternate);
+}
+
+.white {
+    color: var(--background);
+}
+
+.gray {
+    color: var(--sub);
+}
+
+.black-background {
+    background-color: #161616;
+}
+
+.blue-background {
+    background-color: var(--alternate);
+}
+
+.white-background {
+    background-color: var(--background);
+}
+
+.gray-background {
+    background-color: #F6F6F6;
+}
+
+.dark-gray-background {
+    background-color: #eeeeee;
+}
+
+.background p, h1 {
+    margin: 0; 
+    padding: 0.8cm;
+}
+
+a {
+    color: var(--alternate);
+    text-decoration: none;
+    /* text-shadow: 0px 0px 10px var(--secondary); */
+    
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: "Cabin";
+    font-weight: 200;
+}
+a:hover {
+    color: var(--main);
+}
+
+.links {
+    display: contents;
+}
+
+
+/*--------------------------------------------------------------
+# Front page specific
+--------------------------------------------------------------*/
+
+/* Banner */ 
+
+.banner h5, body {
+    margin: 0; 
+}
+
+.banner {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    height: min-content;
+    margin: 0;
+    padding: 0.2cm;
+} 
+
+.menu {
+    width: 100%;
+    height: 2cm;
+    z-index: 2;
+}
+
+#logo {
+    height: 80%;
+    margin-left: 2mm;
+    margin-top: 2mm;
+}
+
+#logo img {
+    object-fit: cover;
+    display: block;
+}
+
+#options {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    float: right;
+    margin-right: 1cm;
+}
+
+#options ul {
+    display: flex;
+    flex-wrap:wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: .07rem;
+}
+    
+#options li + li {
+    margin-left: 30px;
+}
+
+#options a {
+    color: var(--main);
+}
+
+#options a:hover {
+    color: var(--alternate);
+}
+
+@media screen and (max-width: 520px) {
+    #bars {
+      display: none;
+    }
+  }
+
+@media screen and (min-width: 520px) {
+    #nobars {
+      display: none;
+    }
+  }
+
+/* Primary */
+.primary {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    .primary {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        display: grid; 
+        grid-template-columns: 50% 50%; 
+    }
+}
+
+.front-text{ 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    min-height: 400px;
+} 
+
+.signups {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    /* display: grid; 
+    grid-template-columns: 50% 50%;  */
+}
+
+.front-image {
+    width:auto;
+    text-align:center;
+    padding:0;
+    margin: 0;
+}
+.front-image img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: contain;
+    padding:0;
+    margin: 0;
+    height:50vh; 
+    min-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info */
+
+.info {
+    height: 100%;
+    justify-content: center;
+    align-items: top;
+    position: relative; 
+    margin: 100px;
+    
+    /* grid-template-columns: 0% 5% 30% 30% 30% 5%;  */
+}
+
+@media only screen and (min-width: 1000px) {
+    .info {
+        display: grid; 
+        grid-template-columns: 30% 40% 30%; 
+    }
+}
+
+/* Map */
+
+.mapmain {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    
+}
+
+@media only screen and (min-width: 1000px) {
+    .mapmain {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        display: grid; 
+        grid-template-columns: 27% 73%; 
+    }
+}
+
+/* Slider */
+
+.newsplide {
+    height: 35vh;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  
+  max-height: 70vh;
+  
+  object-fit: cover;
+}
+
+.new_splide__slide img {
+  /* width: 70%;*/
+  height: 25vw;
+
+  max-height: 30vh;
+  
+  width: auto;
+  
+  max-width: 100%;
+  
+  object-fit: cover;
+}
+
+/* Bottom options */
+
+#bottom a {
+    color: var(--background);
+}
+
+
+/*--------------------------------------------------------------
+# About us specific
+--------------------------------------------------------------*/
+
+.middle50 {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+@media only screen and (min-width: 600px) {
+    .middle50 {
+        display: grid; 
+        grid-template-columns: 25% 50% 25%; 
+    }
+}
+
+.evensplit {
+    height: 100%;
+    justify-content: center;
+    position: relative; 
+}
+
+.evensplit p {
+    margin: 10px;
+}
+
+.notshared {
+    align-items: center;
+}
+
+.shared {
+    align-items: top;
+}
+
+@media only screen and (min-width: 920px) {
+    .evensplit {
+        display: grid; 
+        grid-template-columns: 6% 42% 4% 42% 6%; 
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+#chpt-pres img {
+    width: 40vh;
+    height: 40vh;
+    object-fit: cover;   
+    border-radius: 25%;
+   
+}
