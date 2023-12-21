@@ -181,20 +181,6 @@ a:hover {
 # Front page specific
 --------------------------------------------------------------*/
 
-/* Banner */ 
-
-.banner h5, body {
-    margin: 0; 
-}
-
-.banner {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    height: min-content;
-    margin: 0;
-    padding: 0.2cm;
-} 
-
 .menu {
     width: 100%;
     height: 2cm;
@@ -242,18 +228,6 @@ a:hover {
 #options a:hover {
     color: var(--alternate);
 }
-
-@media screen and (max-width: 520px) {
-    #bars {
-      display: none;
-    }
-  }
-
-@media screen and (min-width: 520px) {
-    #nobars {
-      display: none;
-    }
-  }
 
 /* Primary */
 .primary {
@@ -330,26 +304,6 @@ a:hover {
     }
 }
 
-/* Map */
-
-.mapmain {
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    position: relative; 
-    
-}
-
-@media only screen and (min-width: 1000px) {
-    .mapmain {
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        position: relative; 
-        display: grid; 
-        grid-template-columns: 27% 73%; 
-    }
-}
 
 /* Slider */
 
